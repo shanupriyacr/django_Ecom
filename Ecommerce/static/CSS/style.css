@@ -1,0 +1,148 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ebad4e;
+}
+
+.navbar .navbar-light .bg-light,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+  background-color: #ADDD8E6  !important;
+  color: #333;
+  font-weight: bold;
+}
+
+.container {
+  /* Adjust the padding as needed */
+  padding-bottom: 20px;
+}
+
+.footer {
+  /* Adjust the positioning and width as needed */
+  position: fixed;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ADD8E6;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+
+
+
+/*
+body
+{
+font-family: 'Roboto', sans-serif;
+background-color:#FFFFE0 ;
+}
+/* BASE.HTML */
+/* .navbar {
+  background-color: #333; /* Set the navbar color
+  color: #fff; /* Set the text color inside the navbar
+}
+
+.navbar .navbar-light .bg-light {   /* or (.navbar-light  .navbar-nav)
+  background-color:#ADDD8E6 !important
+  color: #191970;
+}
+
+.navbar-light navbar-nav nav-link, .nav-light, .navbar-brand {
+  font-weight: bold ;
+  color: #000 ;
+}
+.container {
+  padding-bottom: 20px; /* Adjust this value to create space for the footer */
+}
+/*
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1510%;
+  height:60px;
+  background-color: #ADD8E6;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer {
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ADD8E6;
+  text-align: center;
+  padding: 10px 0;
+}
+/*.footer{
+
+  /* width=1510%;
+   height:60px;
+   background-color:#87CEFA;
+
+
+ position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#ADD8E6;
+  text-align: center;
+  padding: 10px 0;
+}      /* (or) style="position:absolute; bottom:0;">   -------para will come in center */
+
+
+
+
+
+
+
+/* button visibility problem
+
+form .form-control[type="submit"] {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ADD8E6;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+----end-----  */
+
+
+/* CATEGORY.HTML */
+
+.text-padding{
+padding-bottom:20px;
+}
+
+h5{
+font-weight:bold;
+font-size:25px;
+text-align:center;
+}
+
+.custom_icon
+{
+ margin:7px;
+ font_size:50px;
+ color:blue;
+}
+
+.link{
+position:relative;
+left:32%;
+}
+

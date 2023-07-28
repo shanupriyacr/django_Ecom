@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Order View Page{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-bottom:150px;">
+    <div class="row">
+        <h3>Name of the Customer: {{ name }}</h3>
+        {% for p in o %}
+        <div class="col-sm-5" style="border:1px solid black;">
+            <img src="{{ p.products.image.url }}" height="200px" width="200px" alt="{{ p.products.image.url }}">
+        </div>
+
+        <div class="col-sm-5" style="border:1px solid black;">
+                Delivery Address: {{ p.address }}<br>
+                Phone Number: {{ p.phone }}<br>
+                {{ p.products.name }}<br>
+                {{ p.products.price }}<br>
+                quantity ordered:{{p.noofitems}}<br>
+                <!--<p>{{ order.noofitems }}</p> -->
+                Subtotal: {{ p.subtotal }}<br>
+                Ordered on {{ p.date_added }}<br>
+
+                <strong class="text-primary">Delivered on {{p.date_added}}</strong><br>
+                <strong class="text-success">Delivery Status: {{p.delivery_status}}</strong><br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

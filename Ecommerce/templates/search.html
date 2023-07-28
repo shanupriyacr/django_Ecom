@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} search {% endblock %}
+{% block content %}
+
+<center>
+ <div>
+     <h3>You Have Searched For {{query}} </h3> <!-- {{query}}=keyword we have given -->
+ </div>
+</center>
+
+<!--cards-->
+<div class="container" style="margin-bottom:100px;">
+    <div class="row mx-auto">
+        {% for i in products %}
+        <div class="col-sm-4">
+            <!--bootstrap 5/card-->
+            <div class="card" style="width: 20rem; display: flex; flex-direction: column; justify-content: center;">
+                <img src="{{i.image.url}}" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title title_heading">{{i.name}}</h5>
+                    <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <!-- description going to give inside detail page of Product-->
+                    <a href="{% url 'shop:prodetail' i.slug %}" class="btn btn-primary link">DETAILS</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}  <!-- if product is empty -->
+        <div>
+            <p>0 RESULTS FOUND</p>
+        </div>
+
+     {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

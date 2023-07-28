@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} products {% endblock %}
+{% block content %}
+
+<!--banner img-->
+<div>
+    <img src="{{c.image.url}}" height="450px" width="100%">
+</div>
+<!--heading and desc-->
+<div style="margin-bottom:100px;">
+    <h1 class="text-center">{{c.name}}</h1>
+    <p class="text-justify text-padding"></p>
+</div>
+<!--cards-->
+<div class="container" style="margin-bottom:100px;">
+    <div class="row mx-auto">
+        {% for i in p %}
+        <div class="col-sm-4">
+            <!--bootstrap 5/card-->
+            <div class="card" style="width: 20rem; display: flex; flex-direction: column; justify-content: center;">
+                <img src="{{i.image.url}}" class="card-img-top" alt="" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title title_heading">{{i.name}}</h5>
+                    <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <!-- description going to give inside detail page of Product-->
+                    <a href="{% url 'shop:prodetail' i.slug %}" class="btn btn-primary link">DETAILS</a>
+                </div>
+            </div>
+        </div>
+     {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

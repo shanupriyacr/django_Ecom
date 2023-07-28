@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} category {% endblock %}
+{% block content %}
+
+<!--banner img-->
+<div>
+    <img src="{% static 'img/banner.jpg' %}" height="450px" width="100%">
+</div>
+<!--heading and desc-->
+<div style="margin-bottom:100px;">
+    <h1 class="text-center">Our collections</h1>
+    <p class="text-justify text-padding">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<!--cards-->
+<div class="container" style="margin-bottom:100px;">
+    <div class="row mx-auto">
+        {% for i in c %}
+        <div class="col-sm-4">
+            <!--bootstrap 5/card-->
+            <div class="card" style="width: 20rem; display: flex; flex-direction: column; justify-content: center;">
+                <img src="{{i.image.url}}" class="card-img-top" alt="{{i.image}}" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title title_heading">{{i.name}}</h5>
+                    <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <!-- description going to give inside detail page of Product-->
+                    <a href="{% url 'shop:allproducts' i.slug %}" class="btn btn-primary link">PRODUCTS</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
